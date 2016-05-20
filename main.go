@@ -22,5 +22,5 @@ func main() {
 		m.Broadcast(msg)
 	})
 
-	r.Run(":5000")
+	r.Run("")
 }
