@@ -1,7 +1,7 @@
 !<arch>
-__.PKGDEF       0           0     0     644     69856     `
-go object darwin amd64 go1.6.1 X:none
-build id "a40a2b0e7950beb66e7a9efdb438ee9180e0c37f"
+__.PKGDEF       0           0     0     644     69796     `
+go object darwin amd64 go1.6.2 X:none
+build id "90a9a5630ec33e868cc24f72188d2c3b84ae5d95"
 
 $$
 package melody
@@ -380,12 +380,12 @@ package melody
 	func (@"net/http".rÂ·4 *@"net/http".Request "esc:0x1") BasicAuth () (@"net/http".usernameÂ·1 string, @"net/http".passwordÂ·2 string, @"net/http".okÂ·3 bool)
 	func (@"net/http".rÂ·3 *@"net/http".Request "esc:0x1") Cookie (@"net/http".nameÂ·4 string "esc:0x1") (? *@"net/http".Cookie, ? error)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") Cookies () (? []*@"net/http".Cookie)
-	func (@"net/http".rÂ·4 *@"net/http".Request "esc:0x9") FormFile (@"net/http".keyÂ·5 string "esc:0x1") (? @"mime/multipart".File, ? *@"mime/multipart".FileHeader, ? error)
-	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x9") FormValue (@"net/http".keyÂ·3 string "esc:0x1") (? string)
-	func (@"net/http".rÂ·3 *@"net/http".Request "esc:0x9") MultipartReader () (? *@"mime/multipart".Reader, ? error)
+	func (@"net/http".rÂ·4 *@"net/http".Request) FormFile (@"net/http".keyÂ·5 string "esc:0x1") (? @"mime/multipart".File, ? *@"mime/multipart".FileHeader, ? error)
+	func (@"net/http".rÂ·2 *@"net/http".Request) FormValue (@"net/http".keyÂ·3 string "esc:0x1") (? string)
+	func (@"net/http".rÂ·3 *@"net/http".Request) MultipartReader () (? *@"mime/multipart".Reader, ? error)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x9") ParseForm () (? error)
-	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x9") ParseMultipartForm (@"net/http".maxMemoryÂ·3 int64) (? error)
-	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x9") PostFormValue (@"net/http".keyÂ·3 string "esc:0x1") (? string)
+	func (@"net/http".rÂ·2 *@"net/http".Request) ParseMultipartForm (@"net/http".maxMemoryÂ·3 int64) (? error)
+	func (@"net/http".rÂ·2 *@"net/http".Request) PostFormValue (@"net/http".keyÂ·3 string "esc:0x1") (? string)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") ProtoAtLeast (@"net/http".majorÂ·3 int, @"net/http".minorÂ·4 int) (? bool) { return @"net/http".rÂ·2.ProtoMajor > @"net/http".majorÂ·3 || @"net/http".rÂ·2.ProtoMajor == @"net/http".majorÂ·3 && @"net/http".rÂ·2.ProtoMinor >= @"net/http".minorÂ·4 }
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") Referer () (? string)
 	func (@"net/http".rÂ·1 *@"net/http".Request "esc:0x1") SetBasicAuth (@"net/http".usernameÂ·2 string "esc:0x1", @"net/http".passwordÂ·3 string "esc:0x1")
@@ -395,7 +395,7 @@ package melody
 	func (@"net/http".rÂ·1 *@"net/http".Request "esc:0x9") @"net/http".closeBody ()
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") @"net/http".expectsContinue () (? bool)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") @"net/http".isReplayable () (? bool)
-	func (@"net/http".rÂ·3 *@"net/http".Request "esc:0xa") @"net/http".multipartReader () (? *@"mime/multipart".Reader, ? error)
+	func (@"net/http".rÂ·3 *@"net/http".Request) @"net/http".multipartReader () (? *@"mime/multipart".Reader, ? error)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") @"net/http".wantsClose () (? bool)
 	func (@"net/http".rÂ·2 *@"net/http".Request "esc:0x1") @"net/http".wantsHttp10KeepAlive () (? bool)
 	func (@"net/http".reqÂ·2 *@"net/http".Request "esc:0x9") @"net/http".write (@"net/http".wÂ·3 @"io".Writer, @"net/http".usingProxyÂ·4 bool, @"net/http".extraHeadersÂ·5 @"net/http".Header "esc:0x9", @"net/http".waitForContinueÂ·6 func() (? bool) "esc:0x1") (? error)
@@ -480,7 +480,7 @@ package melody
 
 $$
 _go_.o          0           0     0     644     122736    `
-go object darwin amd64 go1.6.1 X:none
+go object darwin amd64 go1.6.2 X:none
 
 !
   go13ldtime.a<github.com/gorilla/websocket.anet/http.aerrors.a ş"".newConfig  €  €eH‹%    H;av\HƒìH    H‰$è    H‹D$H½ äT   H‰(H½ XGø   H‰hH½ œ¦’   H‰hHÇ@   HÇ@    H‰D$HƒÄÃè    ëÌÌÌÌÌÌÌÌÌÌÌÌÌÌ
