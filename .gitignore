@@ -1,0 +1,4 @@
+pkg/*
+.gitignore
+.idea/
+NianGo.iml
