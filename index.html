@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>NianGo</title>
+</head>
+
+<style>
+    #chat {
+      text-align: left;
+      background: #f1f1f1;
+      width: 300px;
+      min-height: 300px;
+      padding: 20px;
+    }
+    #text {
+    width: 340px;
+    padding: 10px;
+    }
+    pre {
+    margin-top: 20px;
+    line-height: 20px;
+    }
+  </style>
+
+<body>
+<center>
+    <pre id="chat"></pre>
+    <input placeholder="回应一下！" id="text" type="text">
+</center>
+
+<script>
+      var url = "ws://" + window.location.host + "/ws";
+      var ws = new WebSocket(url);
+      var name = "Sa";
+      var chat = document.getElementById("chat");
+      var text = document.getElementById("text");
+      ws.onmessage = function (msg) {
+        var line = msg.data + "\n";
+        chat.innerText += line;
+        console.log(msg)
+      };
+      <!--当按下的时候，ws 发送内容-->
+      text.onkeydown = function (e) {
+        if (e.keyCode === 13 && text.value !== "") {
+          ws.send(name + ": " + text.value);
+          text.value = "";
+        }
+      };
+    </script>
+</body>
+</html>
