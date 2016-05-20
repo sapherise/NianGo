@@ -2,3 +2,4 @@ pkg/*
 .gitignore
 .idea/
 NianGo.iml
+push.sh
